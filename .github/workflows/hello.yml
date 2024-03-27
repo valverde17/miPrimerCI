@@ -1,0 +1,16 @@
+name: Say Hello
+
+on: #acá indico cuando se tiene que activar este archivo
+  push: #quiere decir que cada vez que hagamos un push en la rama main se va a ejecutar todo este worflo
+    branches:
+      - main
+
+jobs: #le indicamos el trabajo que tiene que hacer una vez se active 
+  hello_world: #nombre del job (este es opcional)
+    runs-on: ubuntu-20.04 #le inidco en donde tiene que funcionar este job
+    steps:
+      - name: Echo the Message #el nombre del step es opcional
+        run: |
+          echo "Hola Ariel"
+
+    
