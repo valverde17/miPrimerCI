@@ -12,5 +12,8 @@ jobs: #le indicamos el trabajo que tiene que hacer una vez se active
       - name: Echo the Message #el nombre del step es opcional
         run: |
           echo "Hola Ariel"
+      - name: Dime la fecha
+        run: date
+      - run: ls -l
 
     
