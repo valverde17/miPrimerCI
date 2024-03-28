@@ -19,3 +19,7 @@ jobs:
         run: npm install
       - name: Lint #el Lint es super tipico en CI, xq te asegura que el codigo que estas integrando en la rama master es el correcto 
         run: npm run lint
+      - name: Build
+        run: npm run build
+      - name: Test
+        run:  npm test
