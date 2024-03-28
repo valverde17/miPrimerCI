@@ -1,3 +1,5 @@
+[![Deployment Pipeline](https://github.com/valverde17/miPrimerCI/actions/workflows/pipeline.yml/badge.svg)](https://github.com/valverde17/miPrimerCI/actions/workflows/pipeline.yml)
+
 # MiPrimerCI
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.

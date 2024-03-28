@@ -1,0 +1,21 @@
+name: Deployment Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 #se trae el ultimo commit para ser el git checkout mucho mas rapido
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '16'
+      - name: Install dependencies
+        run: npm install
+      - name: Lint #el Lint es super tipico en CI, xq te asegura que el codigo que estas integrando en la rama master es el correcto 
+        run: npm run lint
