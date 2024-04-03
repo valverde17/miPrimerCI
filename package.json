@@ -10,7 +10,8 @@
     "test": "ng test",
     "lint": "eslint",
     "lint:fix": "eslint . --fix",
-    "test:e2e": "npx cypress run"
+    "test:e2e": "npx cypress run",
+    "test:headless": "ng test --no-watch --no-progress --browsers=ChromeHeadless" 
   },
   "private": true,
   "dependencies": {
