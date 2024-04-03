@@ -14,7 +14,7 @@ jobs:
           fetch-depth: 0 #se trae el ultimo commit para ser el git checkout mucho mas rapido
       - uses: actions/setup-node@v4
         with:
-          node-version: 16
+          node-version: 16.x
       - name: Install dependencies
         run: npm install
       - name: Lint #el Lint es super tipico en CI, xq te asegura que el codigo que estas integrando en la rama master es el correcto 
@@ -22,4 +22,4 @@ jobs:
       - name: Build
         run: npm run build
       - name: Test
-        run:  npm test
+        run:  npm test --no-watch --no-progress --browsers=ChromeHeadless
